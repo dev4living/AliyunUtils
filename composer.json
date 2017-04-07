@@ -1,0 +1,20 @@
+{
+    "name": "protobia-alpha/aliyun-utils",
+    "description": "PHP 开发工具包",
+    "type": "library",
+    "license": "apache",
+    "authors": [
+        {
+            "name": "frowhy",
+            "email": "frowhy@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ProtobiaAlpha\\AliyunUtils\\": "src/"
+        },
+        "files": [
+            "lib/aliyun-php-sdk-core/Config.php"
+        ]
+    }
+}
