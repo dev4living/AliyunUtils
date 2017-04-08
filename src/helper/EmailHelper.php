@@ -345,16 +345,16 @@ class EmailHelper
         $this->single_send_mail_request->setReplyToAddress($this->reply_to_address);
         $this->single_send_mail_request->setAddressType($this->address_type);
         $this->single_send_mail_request->setToAddress(implode(',', $this->to_addresses));
-        if ($this->from_alias) {
+        if (! empty($this->from_alias)) {
             $this->single_send_mail_request->setFromAlias($this->from_alias);
         }
-        if ($this->subject) {
+        if (! empty($this->subject)) {
             $this->single_send_mail_request->setSubject($this->subject);
         }
-        if ($this->html_body) {
+        if (! empty($this->html_body)) {
             $this->single_send_mail_request->setHtmlBody($this->html_body);
         }
-        if ($this->text_body && empty($this->html_body)) {
+        if (! empty($this->text_body && empty($this->html_body))) {
             $this->single_send_mail_request->setTextBody($this->text_body);
         }
 
@@ -376,7 +376,7 @@ class EmailHelper
         $this->batch_send_mail_request->setAddressType($this->address_type);
         $this->batch_send_mail_request->setTemplateName($this->template_name);
         $this->batch_send_mail_request->setReceiversName($this->receivers_name);
-        if ($this->tag_name) {
+        if (! empty($this->tag_name)) {
             $this->batch_send_mail_request->setTagName($this->tag_name);
         }
 

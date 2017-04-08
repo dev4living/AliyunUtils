@@ -59,7 +59,6 @@ $ba_req = $ba->getSingleSendSmsRequest();
 
 $bb = new EmailHelper();
 $bb = EmailHelper::init();
-
 $bb->setAccountName('a@b.c');
 $bb->setReplyToAddress(true);
 $bb->setAddressType(1);
